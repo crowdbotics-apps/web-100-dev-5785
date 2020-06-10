@@ -8,37 +8,6 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(max_length=150,)
-    gfhgf = models.ForeignKey(
-        "home.CustomText",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="customtext_gfhgf",
-    )
-    nhgkhghj = models.OneToOneField(
-        "users.User",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="customtext_nhgkhghj",
-    )
-    hjgjhgjh = models.ManyToManyField(
-        "home.HomePage", blank=True, related_name="customtext_hjgjhgjh",
-    )
-    hgfjhgfkhf = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="customtext_hgfjhgfkhf",
-    )
-    hgjgf = models.OneToOneField(
-        "home.CustomText",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="customtext_hgjgf",
-    )
 
     def __str__(self):
         return self.title
@@ -62,3 +31,10 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class Gjhj(models.Model):
+    "Generated Model"
+    nkjk = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="gjhj_nkjk",
+    )
